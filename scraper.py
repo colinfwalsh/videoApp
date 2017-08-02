@@ -5,6 +5,8 @@ import re
 import redis
 from bs4 import BeautifulSoup
 
+apiKey = 'd29f64f3d27a5652e751dbfbb60bcb73'
+
 def checkLink(url):
 	returnedData = makeRequest(url)
 

@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-//        self.webView.allowsInlineMediaPlayback = true
+        self.webView.allowsInlineMediaPlayback = true
         
         
         /*
@@ -35,8 +35,6 @@ class ViewController: UIViewController {
         
         let urlString = "http://vodlocker.to/embed?t=\(title)&referrer=link&server=alternate"
         
-        //print(urlString.extractURLs())
-        
         guard let url = URL(string: urlString) else {
             return}
         
@@ -44,23 +42,6 @@ class ViewController: UIViewController {
         let urlRequest = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 1.0)
         self.webView.loadRequest(urlRequest)
         
-        self.getDataFromVodLocker(url: urlString)
-        
-        /*
-        let types: NSTextCheckingResult.CheckingType = .link
-        
-        let detector = try? NSDataDetector(types: types.rawValue)
-        
-        guard let detect = detector else {
-            return
-        }
-        
-        let matches = detect.matches(in: urlString, options: .reportCompletion, range: NSMakeRange(0, urlString.characters.count))
-        
-        for match in matches {
-            print(match.url!)
-        }
-         */
         
     }
 
@@ -69,41 +50,5 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func getDataFromVodLocker(url: String) -> Void {
-        Alamofire.request(url).responseString {response in
-            //print("\(response.result.value)")
-            if let html = response.result.value {
-                self.parseHTML(html: html)
-            }
-        }
-    }
-    
-    func parseHTML(html: String) -> Void {
-        if let doc = Kanna.HTML(html: html, encoding: String.Encoding.utf8) {
-            //print(doc.at_xpath("<script>"))
-        }
-    }
-
-    
-}
-
-extension String {
-    func extractURLs() -> [NSURL] {
-        var urls : [NSURL] = []
-        do {
-            let detector = try NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
-            detector.enumerateMatches(in: self,
-                                      options: [],
-                                      range: NSMakeRange(0, self.characters.count),
-                                      using: { (result, _, _) in
-                                                if let match = result, let url = match.url {
-                                                    urls.append(url as NSURL)
-                                                }
-            })
-        } catch let error as NSError {
-            print(error.localizedDescription)
-        }
-        return urls
-    }
 }
 

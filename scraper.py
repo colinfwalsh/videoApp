@@ -64,4 +64,9 @@ def makeCheckReq(url):
 
 		if boolCheck:
 			return newString
+
+
+print getLinkForTitle("transformers")
+print getLinkForTitle("last_airbender")
+print getLinkForTitle("asdfasdfa")
 	

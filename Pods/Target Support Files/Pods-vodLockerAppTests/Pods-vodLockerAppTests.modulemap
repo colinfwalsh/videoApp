@@ -1,0 +1,6 @@
+framework module Pods_vodLockerAppTests {
+  umbrella header "Pods-vodLockerAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

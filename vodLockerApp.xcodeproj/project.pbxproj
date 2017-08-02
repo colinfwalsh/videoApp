@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		528A6C8694BBBB30F765FB8E /* Pods_vodLockerAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C03032BF4E7F348FD10CB0 /* Pods_vodLockerAppUITests.framework */; };
+		98065DF2B589E603199551F7 /* Pods_vodLockerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED083FDB698498180189010 /* Pods_vodLockerApp.framework */; };
 		BD480D3E1F29258B00A6C84A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD480D3D1F29258B00A6C84A /* AppDelegate.swift */; };
 		BD480D401F29258B00A6C84A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD480D3F1F29258B00A6C84A /* ViewController.swift */; };
 		BD480D431F29258B00A6C84A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD480D411F29258B00A6C84A /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		BD480D481F29258B00A6C84A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD480D461F29258B00A6C84A /* LaunchScreen.storyboard */; };
 		BD480D531F29258C00A6C84A /* vodLockerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD480D521F29258C00A6C84A /* vodLockerAppTests.swift */; };
 		BD480D5E1F29258C00A6C84A /* vodLockerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD480D5D1F29258C00A6C84A /* vodLockerAppUITests.swift */; };
+		E69523FBAAAF22B9166FBAAF /* Pods_vodLockerAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE123B00C3598BDDF030885E /* Pods_vodLockerAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E937F174A9CDDF672324530 /* Pods-vodLockerAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vodLockerAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vodLockerAppTests/Pods-vodLockerAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1B1A9099B3D930CABE313E1B /* Pods-vodLockerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vodLockerApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vodLockerApp/Pods-vodLockerApp.debug.xcconfig"; sourceTree = "<group>"; };
+		31C03032BF4E7F348FD10CB0 /* Pods_vodLockerAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vodLockerAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39CE8808D09AA5A432FFAEB3 /* Pods-vodLockerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vodLockerApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-vodLockerApp/Pods-vodLockerApp.release.xcconfig"; sourceTree = "<group>"; };
+		478A954B737F83334853B555 /* Pods-vodLockerAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vodLockerAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vodLockerAppUITests/Pods-vodLockerAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4ED083FDB698498180189010 /* Pods_vodLockerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vodLockerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72A542E7E4C081E23BF8F441 /* Pods-vodLockerAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vodLockerAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-vodLockerAppTests/Pods-vodLockerAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		BD480D3A1F29258B00A6C84A /* vodLockerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vodLockerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD480D3D1F29258B00A6C84A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD480D3F1F29258B00A6C84A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +57,8 @@
 		BD480D591F29258C00A6C84A /* vodLockerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vodLockerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD480D5D1F29258C00A6C84A /* vodLockerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vodLockerAppUITests.swift; sourceTree = "<group>"; };
 		BD480D5F1F29258C00A6C84A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC6591F7CEB1A123514E46BE /* Pods-vodLockerAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vodLockerAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-vodLockerAppUITests/Pods-vodLockerAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EE123B00C3598BDDF030885E /* Pods_vodLockerAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vodLockerAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98065DF2B589E603199551F7 /* Pods_vodLockerApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E69523FBAAAF22B9166FBAAF /* Pods_vodLockerAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				528A6C8694BBBB30F765FB8E /* Pods_vodLockerAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		011CC3B8DEAB3CCB61B86A4B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B1A9099B3D930CABE313E1B /* Pods-vodLockerApp.debug.xcconfig */,
+				39CE8808D09AA5A432FFAEB3 /* Pods-vodLockerApp.release.xcconfig */,
+				0E937F174A9CDDF672324530 /* Pods-vodLockerAppTests.debug.xcconfig */,
+				72A542E7E4C081E23BF8F441 /* Pods-vodLockerAppTests.release.xcconfig */,
+				478A954B737F83334853B555 /* Pods-vodLockerAppUITests.debug.xcconfig */,
+				EC6591F7CEB1A123514E46BE /* Pods-vodLockerAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BD480D311F29258B00A6C84A = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +109,8 @@
 				BD480D511F29258C00A6C84A /* vodLockerAppTests */,
 				BD480D5C1F29258C00A6C84A /* vodLockerAppUITests */,
 				BD480D3B1F29258B00A6C84A /* Products */,
+				011CC3B8DEAB3CCB61B86A4B /* Pods */,
+				CF4B1D3E30DD1A9195FE6B44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +155,16 @@
 			path = vodLockerAppUITests;
 			sourceTree = "<group>";
 		};
+		CF4B1D3E30DD1A9195FE6B44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4ED083FDB698498180189010 /* Pods_vodLockerApp.framework */,
+				EE123B00C3598BDDF030885E /* Pods_vodLockerAppTests.framework */,
+				31C03032BF4E7F348FD10CB0 /* Pods_vodLockerAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD480D621F29258C00A6C84A /* Build configuration list for PBXNativeTarget "vodLockerApp" */;
 			buildPhases = (
+				39E58A77943840CA9DA2CA68 /* [CP] Check Pods Manifest.lock */,
 				BD480D361F29258B00A6C84A /* Sources */,
 				BD480D371F29258B00A6C84A /* Frameworks */,
 				BD480D381F29258B00A6C84A /* Resources */,
+				784CE249443D125AD7356026 /* [CP] Embed Pods Frameworks */,
+				F6009D2210976035535D56D9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD480D651F29258C00A6C84A /* Build configuration list for PBXNativeTarget "vodLockerAppTests" */;
 			buildPhases = (
+				6EC0DB4FDA69627B9AB2A94C /* [CP] Check Pods Manifest.lock */,
 				BD480D4A1F29258C00A6C84A /* Sources */,
 				BD480D4B1F29258C00A6C84A /* Frameworks */,
 				BD480D4C1F29258C00A6C84A /* Resources */,
+				A48A74001AF669EF882DCC28 /* [CP] Embed Pods Frameworks */,
+				58A4CBA8A63F84CD49797EFD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD480D681F29258C00A6C84A /* Build configuration list for PBXNativeTarget "vodLockerAppUITests" */;
 			buildPhases = (
+				E397E8637DDE5840181780C7 /* [CP] Check Pods Manifest.lock */,
 				BD480D551F29258C00A6C84A /* Sources */,
 				BD480D561F29258C00A6C84A /* Frameworks */,
 				BD480D571F29258C00A6C84A /* Resources */,
+				8227B69A1294EC6871C2B065 /* [CP] Embed Pods Frameworks */,
+				4A5398F99018EF2AE25801B6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +242,7 @@
 				TargetAttributes = {
 					BD480D391F29258B00A6C84A = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = Q844VW9UW4;
 						ProvisioningStyle = Automatic;
 					};
 					BD480D4D1F29258C00A6C84A = {
@@ -253,6 +303,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		39E58A77943840CA9DA2CA68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4A5398F99018EF2AE25801B6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vodLockerAppUITests/Pods-vodLockerAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58A4CBA8A63F84CD49797EFD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vodLockerAppTests/Pods-vodLockerAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6EC0DB4FDA69627B9AB2A94C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		784CE249443D125AD7356026 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vodLockerApp/Pods-vodLockerApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8227B69A1294EC6871C2B065 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vodLockerAppUITests/Pods-vodLockerAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A48A74001AF669EF882DCC28 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vodLockerAppTests/Pods-vodLockerAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E397E8637DDE5840181780C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F6009D2210976035535D56D9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vodLockerApp/Pods-vodLockerApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BD480D361F29258B00A6C84A /* Sources */ = {
@@ -412,8 +600,10 @@
 		};
 		BD480D631F29258C00A6C84A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B1A9099B3D930CABE313E1B /* Pods-vodLockerApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q844VW9UW4;
 				INFOPLIST_FILE = vodLockerApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.colinWalsh.vodLockerApp;
@@ -424,8 +614,10 @@
 		};
 		BD480D641F29258C00A6C84A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39CE8808D09AA5A432FFAEB3 /* Pods-vodLockerApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q844VW9UW4;
 				INFOPLIST_FILE = vodLockerApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.colinWalsh.vodLockerApp;
@@ -436,6 +628,7 @@
 		};
 		BD480D661F29258C00A6C84A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E937F174A9CDDF672324530 /* Pods-vodLockerAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -450,6 +643,7 @@
 		};
 		BD480D671F29258C00A6C84A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72A542E7E4C081E23BF8F441 /* Pods-vodLockerAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -464,6 +658,7 @@
 		};
 		BD480D691F29258C00A6C84A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 478A954B737F83334853B555 /* Pods-vodLockerAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = vodLockerAppUITests/Info.plist;
@@ -477,6 +672,7 @@
 		};
 		BD480D6A1F29258C00A6C84A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC6591F7CEB1A123514E46BE /* Pods-vodLockerAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = vodLockerAppUITests/Info.plist;
@@ -507,6 +703,7 @@
 				BD480D641F29258C00A6C84A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD480D651F29258C00A6C84A /* Build configuration list for PBXNativeTarget "vodLockerAppTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +712,7 @@
 				BD480D671F29258C00A6C84A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD480D681F29258C00A6C84A /* Build configuration list for PBXNativeTarget "vodLockerAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +721,7 @@
 				BD480D6A1F29258C00A6C84A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

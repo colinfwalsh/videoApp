@@ -30,10 +30,7 @@ class ViewController: UIViewController {
         //let urlString = "http://vodlocker.to/embed?t=transformers"
         
         //let urlString = "https://docs.google.com/file/d/0B9cglZyALNsYZUFOU09RUUlNOFk/preview"
-        
-        let title = "brokeback_mountain"
-        
-        let urlString = "http://vodlocker.to/embed?t=\(title)&referrer=link&server=alternate"
+        let urlString = "http://vodlocker.to/embed?t=transformers&referrer=link&server=alternate"
         
         guard let url = URL(string: urlString) else {
             return}
@@ -42,6 +39,9 @@ class ViewController: UIViewController {
         let urlRequest = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 1.0)
         self.webView.loadRequest(urlRequest)
         
+        
+        Alamofire.request(urlRequest).response {complete in
+        print(complete)}
         
     }
 

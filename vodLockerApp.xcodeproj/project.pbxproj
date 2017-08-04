@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		528A6C8694BBBB30F765FB8E /* Pods_vodLockerAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C03032BF4E7F348FD10CB0 /* Pods_vodLockerAppUITests.framework */; };
 		98065DF2B589E603199551F7 /* Pods_vodLockerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED083FDB698498180189010 /* Pods_vodLockerApp.framework */; };
+		BD1C8AA61F34BFF000BAA8EC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1C8AA51F34BFF000BAA8EC /* HomeViewController.swift */; };
 		BD480D3E1F29258B00A6C84A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD480D3D1F29258B00A6C84A /* AppDelegate.swift */; };
 		BD480D401F29258B00A6C84A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD480D3F1F29258B00A6C84A /* ViewController.swift */; };
 		BD480D431F29258B00A6C84A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD480D411F29258B00A6C84A /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		478A954B737F83334853B555 /* Pods-vodLockerAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vodLockerAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vodLockerAppUITests/Pods-vodLockerAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4ED083FDB698498180189010 /* Pods_vodLockerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vodLockerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72A542E7E4C081E23BF8F441 /* Pods-vodLockerAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vodLockerAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-vodLockerAppTests/Pods-vodLockerAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		BD1C8AA51F34BFF000BAA8EC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BD480D3A1F29258B00A6C84A /* vodLockerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vodLockerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD480D3D1F29258B00A6C84A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD480D3F1F29258B00A6C84A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			children = (
 				BD480D3D1F29258B00A6C84A /* AppDelegate.swift */,
 				BD480D3F1F29258B00A6C84A /* ViewController.swift */,
+				BD1C8AA51F34BFF000BAA8EC /* HomeViewController.swift */,
 				BD480D411F29258B00A6C84A /* Main.storyboard */,
 				BD480D441F29258B00A6C84A /* Assets.xcassets */,
 				BD480D461F29258B00A6C84A /* LaunchScreen.storyboard */,
@@ -449,6 +452,7 @@
 			files = (
 				BD480D401F29258B00A6C84A /* ViewController.swift in Sources */,
 				BD480D3E1F29258B00A6C84A /* AppDelegate.swift in Sources */,
+				BD1C8AA61F34BFF000BAA8EC /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

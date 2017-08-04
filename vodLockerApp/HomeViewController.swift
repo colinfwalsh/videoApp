@@ -16,6 +16,8 @@ class HomeViewController: UIViewController {
     
     var dictionary: Dictionary = [String: Any]()
     
+    var movieTitle: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,22 +31,15 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let id = 550
-        let key = "d29f64f3d27a5652e751dbfbb60bcb73"
-        let url = "https://api.themoviedb.org/3/movie/\(id)?api_key=\(key)"
-        
-        Alamofire.request(url).responseJSON { response in
-            self.dictionary =
-                try! JSONSerialization.jsonObject(with: response.data!, options: .mutableContainers) as! [String: Any]
-            
-//            print(dictionary)
-        }
+ 
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
 }
 
 extension HomeViewController: UISearchResultsUpdating {
@@ -83,13 +78,35 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath)
         
-        cell.textLabel?.text = "Hey"
-        cell.detailTextLabel?.text = "There"
+        //let id = 550
+        let key = "d29f64f3d27a5652e751dbfbb60bcb73"
+        //let movieUrl = "https://api.themoviedb.org/3/movie/\(id)?api_key=\(key)"
+        let popularityUrl = "https://api.themoviedb.org/3/discover/movie?api_key=\(key)&sort_by=popularity.desc"
         
+        Alamofire.request(popularityUrl).responseJSON { response in
+            self.dictionary =
+                try! JSONSerialization.jsonObject(with: response.data!, options: .mutableContainers) as! [String: Any]
+            
+            OperationQueue.main.addOperation {
+                let resultArray = self.dictionary["results"] as! [[String: Any]]
+                
+                let item = resultArray[indexPath.row] as [String: Any]
+                
+                cell.textLabel?.text = item["title"] as? String
+                cell.detailTextLabel?.text = String(describing: item["vote_count"] as! Int)
+            }
+            //            print(dictionary)
+        }
+    
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("selected cell")
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath)
+        
+        self.movieTitle = (cell.textLabel?.text)!
+        print(self.movieTitle)
+        self.performSegue(withIdentifier: "toVideo", sender: self)
     }
 }

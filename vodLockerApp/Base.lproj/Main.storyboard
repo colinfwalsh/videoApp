@@ -48,9 +48,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="JaQ-oe-UTk"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -67,6 +64,7 @@
                     <connections>
                         <outlet property="searchDisplayController" destination="6GI-jr-yiV" id="K2g-O8-4dQ"/>
                         <outlet property="tableView" destination="P42-ak-aMS" id="iE4-SW-xzI"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toVideo" id="aZN-kh-cp2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T9k-de-foI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -94,17 +92,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="usz-GN-IjU">
-                                <rect key="frame" x="0.0" y="233.5" width="375" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="5R5-PM-CQn"/>
-                                    <constraint firstAttribute="width" constant="375" id="dGL-vB-FPH"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="usz-GN-IjU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EiS-8e-Grc"/>
                             <constraint firstItem="usz-GN-IjU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ey4-lq-qAa"/>
+                            <constraint firstItem="usz-GN-IjU" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Hgf-Qt-fTI"/>
+                            <constraint firstItem="usz-GN-IjU" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="mkv-xk-5Zi"/>
                         </constraints>
                     </view>
                     <connections>

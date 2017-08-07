@@ -15,6 +15,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var webView: UIWebView!
     
+    var movieTitle: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,7 +32,7 @@ class ViewController: UIViewController {
         //let urlString = "http://vodlocker.to/embed?t=transformers"
         
         //let urlString = "https://docs.google.com/file/d/0B9cglZyALNsYZUFOU09RUUlNOFk/preview"
-        let urlString = "http://vodlocker.to/embed?t=transformers&referrer=link&server=alternate"
+        let urlString = "http://vodlocker.to/embed?t=\(self.movieTitle)&referrer=link&server=alternate"
         
         guard let url = URL(string: urlString) else {
             return}

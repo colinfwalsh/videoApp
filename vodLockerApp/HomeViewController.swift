@@ -18,6 +18,8 @@ class HomeViewController: UIViewController {
     
     var movieTitle: String = ""
     
+    var itemArray = [[String:Any]]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,6 +41,12 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! ViewController
+        
+        vc.movieTitle = self.movieTitle
+        
+    }
     
 }
 
@@ -88,9 +96,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 try! JSONSerialization.jsonObject(with: response.data!, options: .mutableContainers) as! [String: Any]
             
             OperationQueue.main.addOperation {
-                let resultArray = self.dictionary["results"] as! [[String: Any]]
+                self.itemArray = self.dictionary["results"] as! [[String: Any]]
                 
-                let item = resultArray[indexPath.row] as [String: Any]
+                let item = self.itemArray[indexPath.row] as [String: Any]
                 
                 cell.textLabel?.text = item["title"] as? String
                 cell.detailTextLabel?.text = String(describing: item["vote_count"] as! Int)
@@ -103,10 +111,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath)
+        let stringToFormat = self.itemArray[indexPath.row]["title"] as! String
         
-        self.movieTitle = (cell.textLabel?.text)!
-        print(self.movieTitle)
+        let stringArr = stringToFormat.components(separatedBy: " ")
+        
+        var newString = ""
+        for string in stringArr {
+            newString = newString + string + "_"
+        }
+    
+        print(newString)
+        
         self.performSegue(withIdentifier: "toVideo", sender: self)
     }
 }

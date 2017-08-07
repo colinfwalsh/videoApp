@@ -20,6 +20,8 @@ class HomeViewController: UIViewController {
     
     var itemArray = [[String:Any]]()
     
+    var movieResults = [[String: Any]]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,9 +35,9 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
- 
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -52,11 +54,37 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        print("stuff")
+        let search = searchController.searchBar.text
+        
+        var searchUrl: String?
+        
+        if let search = search {
+            searchUrl = "https://api.themoviedb.org/3/search/movie?api_key=d29f64f3d27a5652e751dbfbb60bcb73&query=\(search)"
+        } else {
+            print("Nothing found")
+        }
+        
+        if let searchUrl = searchUrl {
+            Alamofire.request(searchUrl).responseJSON { response in
+                let dictionary =
+                   try? JSONSerialization
+                        .jsonObject(with: response.data!,
+                                    options: .mutableContainers)
+                    as! [String: Any]
+                
+                OperationQueue.main.addOperation {
+                    self.movieResults = self.dictionary["results"] as! [[String: Any]]
+                    //print(self.movieResults)
+                    self.tableView.reloadData()
+                }
+        
+            }
+        }
     }
 }
 
 extension HomeViewController: UISearchControllerDelegate {
+    
 }
 
 
@@ -67,7 +95,15 @@ extension HomeViewController: UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("Searching for: \(String(describing: self.searchController.searchBar.text))")
+        let search = searchBar.text!
+        let searchUrl = "https://api.themoviedb.org/3/search/movie?api_key=d29f64f3d27a5652e751dbfbb60bcb73&query=\(search)"
+        
+        Alamofire.request(searchUrl).responseJSON { response in
+            let dictionary =
+                try? JSONSerialization.jsonObject(with: response.data!, options: .mutableContainers) as! [String: Any]
+            
+            print(dictionary ?? ["This is a test" : "guy"])
+        }
     }
 }
 
@@ -91,21 +127,39 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         //let movieUrl = "https://api.themoviedb.org/3/movie/\(id)?api_key=\(key)"
         let popularityUrl = "https://api.themoviedb.org/3/discover/movie?api_key=\(key)&sort_by=popularity.desc"
         
+        if self.searchController.isActive &&
+            self.searchController.searchBar.text != "" {
+            
+            let item: [String: Any] = self.movieResults[indexPath.row]
+            
+            cell.textLabel?.text = item["original_title"] as? String
+            cell.detailTextLabel?.text = String(describing: item["vote_count"] as! Int)
+            
+            /*
+            cell.textLabel?.text = item["original_title"] as? String
+            cell.detailTextLabel?.text = String(describing: item["vote_count"] as! Int)*/
+            
+        } else {
+        
         Alamofire.request(popularityUrl).responseJSON { response in
             self.dictionary =
                 try! JSONSerialization.jsonObject(with: response.data!, options: .mutableContainers) as! [String: Any]
             
             OperationQueue.main.addOperation {
-                self.itemArray = self.dictionary["results"] as! [[String: Any]]
                 
-                let item = self.itemArray[indexPath.row] as [String: Any]
+                    self.itemArray = self.dictionary["results"] as! [[String: Any]]
+                    let item = self.itemArray[indexPath.row] as [String: Any]
+                    
+                    cell.textLabel?.text = item["title"] as? String
+                    cell.detailTextLabel?.text = String(describing: item["vote_count"] as! Int)
+                }
                 
-                cell.textLabel?.text = item["title"] as? String
-                cell.detailTextLabel?.text = String(describing: item["vote_count"] as! Int)
+                
+                
             }
-            //            print(dictionary)
+       
         }
-    
+        
         return cell
     }
     
@@ -116,11 +170,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let stringArr = stringToFormat.components(separatedBy: " ")
         
         var newString = ""
-        for string in stringArr {
-            newString = newString + string + "_"
+        for i in 0...stringArr.count-1 {
+            if stringArr[i] != stringArr.last {
+                newString = newString + stringArr[i] + "_"
+            } else {
+                newString = newString + stringArr[i]
+                break
+            }
         }
-    
-        print(newString)
+        
+        self.movieTitle = newString
         
         self.performSegue(withIdentifier: "toVideo", sender: self)
     }
